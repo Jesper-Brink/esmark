@@ -10,7 +10,7 @@ function Card({ name, title, description, fromprice, city, address, postalCode, 
         <p className="absolute bottom-5 left-0 bg-secondary text-black py-2 px-4">{"fra" + " " + fromprice + ",-"}</p>
       </div>
       <div className="flex flex-col gap-1 md:gap-2 px-4 font-small text-gray-600 basis-full md:basis-2/3 text-left md:pr-0 md:pr-6 tabIndex={0}">
-        <p className="line-clamp-2 font-bold">{title}</p>
+        <h2 className="line-clamp-2 font-bold">{title}</h2>
         <p className="line-clamp-4 text-sm" title={description}>{description}</p>
         <p className="text-sm text-blue-500 pb-4 md:pb-0 line-clamp-1">{address + ", " + postalCode + ", " + city}</p>         
       </div>
