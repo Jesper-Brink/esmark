@@ -40,14 +40,14 @@ function HousesFilter() {
   
 
   return (
-    <div className="flex">
-      <div className="pr-6 mb-10 text-left flex-none mr-8">
+    <div className="flex flex-col md:flex-row">
+      <div className="md:pr-6 mb-10 text-left flex-none md:mr-8">
         <h2>Find dit feriehus</h2>
         <div className="grid grid-row gap-4 bg-primary text-white mt-5 py-4 px-6 rounded-md">
           <div className="w-full">
             <Listbox value={selected} onChange={setSelectedCapacity}>
-              <div className="relative mt-2 mr-10 w-full">
-                <ListboxButton className="grid cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
+              <div className="relative mt-2 md:mr-10 w-full">
+                <ListboxButton className="grid w-full cursor-default rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6">
                   <span className="col-start-1 row-start-1 flex items-center gap-3 pr-6">
                     <img alt="Personer" src={Persons} className="size-5 shrink-0" />
                     <span className="block truncate">{selected + " person"}{selected === 1 ? "" : "er"}</span>
@@ -105,7 +105,7 @@ function HousesFilter() {
 
       <div className="bg-white/90 rounded-md mb-10 flex-1">
         <div>
-          <p className="text-left pb-4">{filteredHouses.length == 0 ? "Beklager, men der er ingen sommerhuse der opfylder kriterierne" : "Viser " + filteredHouses.length + " sommerhuse der opfylder kriterierne"}</p>
+          <p className="text-center md:text-left pb-4">{filteredHouses.length == 0 ? "Beklager, men der er ingen sommerhuse der opfylder kriterierne" : "Viser " + filteredHouses.length + " sommerhuse der opfylder kriterierne"}</p>
           {filteredHouses.map((item) => (
             <Card key={item.id} name={item.name} title={item.title} description={item.description} city={item.city} fromprice={item.fromPrice} address={item.address1} postalCode={item.postalCode} imgUrl={item.images[0].url} houseCapacity={item.facilities.NumberOfPersons} petsAllowed={item.facilities.PetsAllowed} />
           ))}

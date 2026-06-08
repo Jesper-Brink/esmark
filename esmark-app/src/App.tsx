@@ -8,8 +8,8 @@ function App() {
     <>  
 
       <div className="flex flex-col">
-        <div className="flex flex-row sticky top-0 z-10 bg-white/90 backdrop-blur-sm">
-          <img src={logo} className="ml-3 lg:w-[114px] lg:h-[116px] lg:scale-[0.55]" width="134" height="136" alt="Esmark Logo" title="Esmark Sommerhusudlejning" />
+        <div className="flex flex-col items-center md:items-left md:flex-row sticky top-0 z-10 bg-white/90 backdrop-blur-sm">
+          <img src={logo} className="mt-3 md:ml-3 w-14 md:w-[114px] md:h-[116px] md:scale-[0.55]" alt="Esmark Logo" title="Esmark Sommerhusudlejning" />
           <h1>Esmark Sommerhusudlejning Test</h1>
         </div>
 
