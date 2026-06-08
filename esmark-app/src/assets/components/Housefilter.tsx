@@ -107,7 +107,7 @@ function HousesFilter() {
         <div>
           <p className="text-center md:text-left pb-4">{filteredHouses.length == 0 ? "Beklager, men der er ingen sommerhuse der opfylder kriterierne" : "Viser " + filteredHouses.length + " sommerhuse der opfylder kriterierne"}</p>
           {filteredHouses.map((item) => (
-            <Card key={item.id} name={item.name} title={item.title} description={item.description} city={item.city} fromprice={item.fromPrice} address={item.address1} postalCode={item.postalCode} imgUrl={item.images[0].url} houseCapacity={item.facilities.NumberOfPersons} petsAllowed={item.facilities.PetsAllowed} />
+            <Card key={item.id} name={item.name} title={item.title} description={item.description} city={item.city} fromprice={item.fromPrice} address={item.address1} postalCode={item.postalCode} imgUrl={item.images[0].url} houseCapacity={item.facilities.NumberOfPersons} petsAllowed={item.facilities.PetsAllowed.toString()} />
           ))}
         </div>
       </div>
