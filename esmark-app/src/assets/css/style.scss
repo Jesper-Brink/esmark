@@ -1,0 +1,25 @@
+.bg-primary { 
+  background-color: var(--color-primary);
+
+  p, h1, h2, ul, ol {
+    color: var(--color-primary-contrast);
+  }
+}
+
+.bg-secondary { 
+  background-color: var(--color-secondary); 
+}
+
+select {
+  background-color: white;
+  color: var(--text);
+}
+
+.checkbox {
+  height:  24px;
+  width: 24px;
+}
+
+.image-svg {
+  filter: invert(0%) sepia(100%) saturate(100%) hue-rotate(182deg) brightness(1000%) contrast(103%);
+}
